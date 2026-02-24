@@ -1,142 +1,129 @@
-📄 README.md
-# 🎬 Movie App (React + Vite)
+Writing
+🎬 Movie App — React Router Version
 
-A simple and dynamic Movie Application built with React and Vite.  
-This app allows users to view, add, and filter movies based on title and rating.
+A dynamic Movie Application built with React, Vite, and React Router that allows users to browse movies, view detailed information, watch trailers, and filter movies based on title and rating.
 
----
+This project demonstrates modern React concepts including component architecture, state management with hooks, and client-side routing.
 
-## 🚀 Features
+🚀 Features
 
-- Display a list of movies
-- Add a new movie dynamically
-- Filter movies by:
-  - Title (case-insensitive search)
-  - Minimum rating
-- Responsive card-based layout
-- Built using modern React Hooks
+✅ Display a list of movies
+✅ Add new movies dynamically
+✅ Filter movies by title and rating
+✅ Clickable movie cards
+✅ Dedicated movie details page
+✅ Embedded movie trailer playback
+✅ Navigation between pages using React Router
+✅ Back navigation to home page without reload
 
----
+🧠 Concepts Practiced
 
-## 🛠️ Built With
+React Functional Components
 
-- React (Functional Components)
-- React Hooks (`useState`)
-- Vite (Fast build tool and dev server)
-- JavaScript (ES6+)
-- CSS (Inline styling)
+React Hooks (useState)
 
----
+Props & State Management
 
-## 📂 Project Structure
+Component Reusability
 
+Conditional Rendering
 
+Array Methods (map, filter)
 
+Single Page Application (SPA) Architecture
+
+Client-Side Routing with React Router
+
+🛠️ Technologies Used
+
+React
+
+Vite
+
+React Router DOM
+
+JavaScript (ES6+)
+
+CSS (Inline Styling)
+
+📂 Project Structure
 src/
 ├── components/
-│ ├── MovieCard.jsx
-│ ├── MovieList.jsx
-│ ├── Filter.jsx
-│ └── AddMovieForm.jsx
+│   ├── MovieCard.jsx
+│   ├── MovieList.jsx
+│   ├── Filter.jsx
+│   └── AddMovieForm.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   └── MovieDetails.jsx
+│
 ├── App.jsx
-└── main.jsx
-
-
----
-
-## 🧠 Component Overview
-
-### 1️⃣ MovieCard
-Displays individual movie information:
-- Poster
-- Title
-- Description
-- Rating
-
-### 2️⃣ MovieList
-Maps through the movies array and renders MovieCard components.
-
-### 3️⃣ Filter
-Allows users to filter movies by:
-- Title (text input)
-- Rating (minimum value)
-
-### 4️⃣ AddMovieForm
-Enables users to:
-- Enter movie details
-- Submit and dynamically add a new movie to the list
-
----
-
-## 📊 Movie Data Model
+├── main.jsx
+└── index.css
+🎬 Movie Data Model
 
 Each movie object follows this structure:
 
-```javascript
 {
   id: number,
   title: string,
   description: string,
+  fullDescription: string,
   posterURL: string,
-  rating: number
+  rating: number,
+  trailerURL: string
 }
+🧭 Routing System
+Route	Description
+/	Home page showing movie list
+/movie/:id	Movie description and trailer page
+
+React Router enables seamless navigation without page refresh.
 
 ⚙️ Installation & Setup
-
-Clone the repository:
-
-git clone <your-repo-url>
-
-
-Navigate into the project folder:
-
+1️⃣ Clone the repository
+git clone <your-repository-url>
+2️⃣ Navigate into project
 cd movie-app
-
-
-Install dependencies:
-
+3️⃣ Install dependencies
 npm install
-
-
-Start the development server:
-
+4️⃣ Start development server
 npm run dev
 
+Open:
 
-Open in browser:
+http://localhost:5173
+🎥 How It Works
 
-http://localhost:5173/
+User lands on the Home Page.
 
-🎯 Learning Objectives
+Movies are displayed as cards.
 
-This project demonstrates:
+User can filter movies by title or rating.
 
-React component architecture
+Clicking a movie navigates to its details page.
 
-State management using useState
+Trailer is displayed using embedded YouTube video.
 
-Props drilling
+User can return to the home page via navigation link.
 
-Controlled form inputs
+🔮 Possible Future Improvements
 
-Array methods (map, filter)
+Movie editing functionality
 
-Dynamic rendering in React
+Delete movie feature
 
-🔮 Possible Improvements
+LocalStorage persistence
 
-Add delete functionality
+Responsive design improvements
 
-Add edit functionality
+Search debounce optimization
 
-Persist movies using localStorage
+Star rating component
 
-Improve UI with a CSS framework (Bootstrap / Tailwind)
+Dark mode UI
 
-Add modal for adding movies
+👨‍💻 Author - EZEKIEL FOLARIN
 
-Implement star rating UI
-
-👨‍💻 Author
-
-Built as part of a React checkpoint project to practice component design and state management.
+Built as part of a React checkpoint project focused on mastering component-based architecture and routing in modern React applications.
